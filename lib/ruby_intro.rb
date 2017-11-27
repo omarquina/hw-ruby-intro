@@ -94,7 +94,7 @@ class BookInStock
   end
 
   def price=(value)
-    raise ArgumentError.new("") if value.zero? or value.negative?
+    raise ArgumentError.new("") if value.zero? or value < 0
     @price = value
   end
   #puts BookInStock.instance_methods.sort.to_s
